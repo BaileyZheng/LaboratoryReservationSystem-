@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+          "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+          "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="skgl-action" namespace="/skgl" extends="base-default">
+		<action name="home_*" class="edu.just.reservation.skgl.action.ShowAction"
+			method="{1}">
+			<result name="{1}">/WEB-INF/jsp/skgl/{1}.jsp</result>
+			<result name="listSKGCUI">/WEB-INF/jsp/skgl/skgcgl/listSKGCUI.jsp</result>
+			<result name="listSKGXUI">/WEB-INF/jsp/skgl/skgxwh/listSKGXUI.jsp</result>
+			<result name="listSKJHUI">/WEB-INF/jsp/skgl/skjh/listSKJHUI.jsp</result>
+			<result name="addGradeUI">/WEB-INF/jsp/skgl/kccjgl/addGradeUI.jsp</result>
+			<result name="listGradeUI">/WEB-INF/jsp/skgl/kccjgl/listGradeUI.jsp</result>
+			<result name="selectGradeTypeUI">/WEB-INF/jsp/skgl/kccjgl/selectGradeTypeUI.jsp</result>
+			<result name="listGrade" type="redirectAction">
+				<param name="actionName">home_listGradeUI</param>
+			</result>
+			<result name="list" type="redirectAction">
+				<param name="actionName">home_skgxwh</param>
+				<param name="pageNo">${pageNo}</param>
+				<param name="encode">true</param>
+			</result>
+		</action>
+	</package>
+</struts>

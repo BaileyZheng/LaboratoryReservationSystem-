@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+          "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+          "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="time-action" namespace="/manage" extends="base-default">
+		<action name="time_*" class="edu.just.reservation.manage.time.action.SysTimeAction" method="{1}">
+			<result name="time">/WEB-INF/jsp/manage/time/time.jsp</result>
+		</action>
+	</package>
+</struts>

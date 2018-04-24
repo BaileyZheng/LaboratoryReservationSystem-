@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+          "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+          "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="user-action" namespace="/manage" extends="base-default">
+		<action name="user_*" class="edu.just.reservation.manage.user.action.UserAction" method="{1}">
+			<result name="{1}">/WEB-INF/jsp/manage/user/{1}.jsp</result>
+			<result name="list" type="redirectAction">
+				<param name="actionName">user_listUI</param>
+				<param name="user.name">${strName}</param>
+				<param name="pageNo">${pageNo}</param>
+				<param name="encode">true</param>
+			</result>
+		</action>
+	</package>
+</struts>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="edu.just.reservation.tjbb.entity.DataStat" table="data_stat">
+        <id name="id" type="java.lang.String">
+            <column name="id" length="32"/>
+            <generator class="uuid.hex" />
+        </id>
+        <property name="useDay" type="java.sql.Timestamp">
+            <column name="useDay" length="19" />
+        </property>
+        <property name="useTime" type="java.lang.Integer">
+            <column name="useTime"/>
+        </property>
+        <property name="useNumber" type="java.lang.Integer">
+            <column name="useNumber" />
+        </property>
+        <many-to-one name="room" class="edu.just.reservation.manage.room.entity.Room" column="roomId"></many-to-one>
+    </class>
+</hibernate-mapping>

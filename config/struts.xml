@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+          "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+          "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<!-- 禁止动态方法访问 -->
+	<constant name="struts.enable.DynamicMethodInvocation" value="false"></constant>
+	<!-- 配置成开发模式 -->
+	<constant name="struts.devMode" value="true"></constant>
+	<!-- 配置拓展名为action -->
+	<constant name="struts.action.extention" value="action"></constant>
+	<!-- 把主题配置成simple -->
+	<constant name="struts.ui.theme" value="simple"></constant>
+
+	<!-- 配置全局结果及异常映射 -->
+	<package name="base-default" extends="struts-default">
+		<!-- 返回结果类型 -->
+		<result-types>
+			<result-type name="error" class="edu.just.reservation.core.action.SysResultAction"></result-type>
+		</result-types>
+		<!-- 全局返回结果 -->
+		<global-results>
+			<result name="error" type="error">/WEB-INF/jsp/error.jsp</result>
+			<result name="sysError">/WEB-INF/jsp/error.jsp</result>
+			<result name="input">/WEB-INF/jsp/error.jsp</result>
+		</global-results>
+		<!-- 全局异常映射 -->
+		<global-exception-mappings>
+			<exception-mapping result="sysError"
+				exception="edu.just.reservation.core.exception.SysException"></exception-mapping>
+			<exception-mapping result="input" exception="java.lang.Exception"></exception-mapping>
+		</global-exception-mappings>
+	</package>
+	<include file="edu/just/reservation/test/config/test-struts.xml"></include>
+
+	<!-- 引入配置文件 -->
+	<include file="edu/just/reservation/login/config/login-struts.xml"></include>
+	<include file="edu/just/reservation/home/config/home-struts.xml"></include>
+	<include file="edu/just/reservation/manage/home/config/home-struts.xml"></include>
+	<include file="edu/just/reservation/manage/user/config/user-struts.xml"></include>	
+	<include file="edu/just/reservation/manage/role/config/role-struts.xml"></include>
+	<include file="edu/just/reservation/manage/info/config/info-struts.xml"></include>
+	<include file="edu/just/reservation/manage/clazz/config/clazz-struts.xml"></include>
+	<include file="edu/just/reservation/manage/course/config/course-struts.xml"></include>	
+	<include file="edu/just/reservation/manage/order/config/order-struts.xml"></include>
+	<include file="edu/just/reservation/manage/time/config/sysTime-struts.xml"></include>
+	<include file="edu/just/reservation/manage/room/config/room-struts.xml"></include>
+	<include file="edu/just/reservation/manage/teacher/config/teacher-struts.xml"></include>
+	<include file="edu/just/reservation/manage/student/config/student-struts.xml"></include>
+	<include file="edu/just/reservation/manage/skgx/config/teachRelat-struts.xml"></include>
+	<include file="edu/just/reservation/cgzs/config/show-struts.xml"></include>
+	<include file="edu/just/reservation/skgl/config/show-struts.xml"></include>
+	<include file="edu/just/reservation/xwgg/config/show-struts.xml"></include>
+	<include file="edu/just/reservation/xwgg/config/info-struts.xml"></include>
+	<include file="edu/just/reservation/yyxx/config/show-struts.xml"></include>
+	<include file="edu/just/reservation/yyxx/config/order-struts.xml"></include>
+	<include file="edu/just/reservation/tjbb/config/show-struts.xml"></include>
+	<include file="edu/just/reservation/grxx/config/show-struts.xml"></include>
+</struts>

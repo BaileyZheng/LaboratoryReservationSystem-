@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="edu.just.reservation.manage.graderate.entity.GradeRate" table="graderate">
+        <id name="id" type="java.lang.String">
+            <column name="id" length="32"/>
+            <generator class="uuid.hex" />
+        </id>
+        <property name="cqrate" type="java.lang.Integer">
+            <column name="cqrate" />
+        </property>
+        <property name="ktrate" type="java.lang.Integer">
+            <column name="ktrate" />
+        </property>
+        <property name="syrate" type="java.lang.Integer">
+            <column name="syrate" />
+        </property>
+        <property name="mode" type="java.lang.String">
+        	<column name="mode"></column>
+        </property>
+        <many-to-one name="order" class="edu.just.reservation.manage.order.entity.Orders" column="oId"></many-to-one>
+    </class>
+</hibernate-mapping>

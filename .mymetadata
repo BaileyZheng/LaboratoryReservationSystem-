@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="ReservationSystem_bak"
+  id="myeclipse.1483164142418"
+  context-root="/ReservationSystem"
+  j2ee-spec="5.0"
+  archive="ReservationSystem_bak.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+

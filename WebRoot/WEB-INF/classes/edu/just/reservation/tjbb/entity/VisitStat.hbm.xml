@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="edu.just.reservation.tjbb.entity.VisitStat" table="visit_stat">
+        <id name="id" type="java.lang.String">
+            <column name="id" length="32"/>
+            <generator class="uuid.hex" />
+        </id>
+        <property name="visitTime" type="java.sql.Timestamp">
+            <column name="visitTime" length="19" />
+        </property>
+        <many-to-one name="user" class="edu.just.reservation.manage.user.entity.User" column="userId"></many-to-one>
+    </class>
+</hibernate-mapping>

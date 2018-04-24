@@ -1,0 +1,4 @@
+#Mon Jan 02 16:12:22 CST 2017
+eclipse.preferences.version=1
+validator.Checked=config/struts.xml,src/com/zbl/login/config/login-struts.xml,src/edu/just/reservation/login/config/login-struts.xml,WebRoot/js/ueditor
+validator.Unchecked=

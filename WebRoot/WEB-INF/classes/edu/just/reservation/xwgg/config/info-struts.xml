@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+          "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+          "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="xwgg_info-action" namespace="/xwgg" extends="base-default">
+		<action name="info_*" class="edu.just.reservation.xwgg.action.InfoAction"
+			method="{1}">
+			<result name="listXWDT">/WEB-INF/jsp/xwgg/xwdt/list.jsp</result>
+			<result name="listTZGG">/WEB-INF/jsp/xwgg/tzgg/list.jsp</result>
+			<result name="listXWQS">/WEB-INF/jsp/xwgg/xwqs/list.jsp</result>
+			<result name="listSWZL">/WEB-INF/jsp/xwgg/swzl/list.jsp</result>
+			<result name="listGZZD">/WEB-INF/jsp/xwgg/gzzd/list.jsp</result>
+		</action>
+	</package>
+</struts>

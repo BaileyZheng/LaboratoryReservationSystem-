@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="edu.just.reservation.manage.grade.entity.Grade" table="grade">
+        <id name="id" type="java.lang.String">
+            <column name="id" length="32"/>
+            <generator class="uuid.hex" />
+        </id>
+        <property name="cq" type="java.lang.Integer">
+            <column name="cq" />
+        </property>
+        <property name="kt" type="java.lang.Integer">
+            <column name="kt" />
+        </property>
+        <property name="sy" type="java.lang.Integer">
+            <column name="sy" />
+        </property>
+        <property name="grade" type="java.lang.Integer">
+            <column name="grade" />
+        </property>
+        <property name="memo" type="java.lang.String">
+            <column name="memo" length="50" />
+        </property>
+        <property name="state" type="java.lang.String">
+            <column name="state" length="10" />
+        </property>
+        <many-to-one name="student" class="edu.just.reservation.manage.student.entity.Student" column="studentId"></many-to-one>
+        <many-to-one name="order" class="edu.just.reservation.manage.order.entity.Orders" column="oId"></many-to-one>
+    </class>
+</hibernate-mapping>

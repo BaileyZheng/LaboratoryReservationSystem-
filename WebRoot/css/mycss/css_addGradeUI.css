@@ -1,0 +1,32 @@
+#stu-grade{
+	border:2px solid black;
+	text-align:center;
+	width:100%;
+}
+#stu-grade th{
+	border:1px solid black;
+	height:35px;
+}
+#stu-grade td{
+	border:1px solid gray;
+	height:25px;
+}
+.ip-grade{
+	width:80%;
+	border:none;
+}
+.ip-grade-memo{
+	border:none;
+	width:90%;
+}
+.navigator{
+	padding-top:20px;
+	text-align:center;
+	width:80%;
+	margin:0 auto;
+}
+.grade{
+	width:80px;
+	text-align:center;
+	border:0px;
+}
